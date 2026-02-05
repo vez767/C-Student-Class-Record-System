@@ -32,7 +32,7 @@ void add_student(){
     fprintf(f, "%s %d %d\n", new_student.name, new_student.id, new_student.grade);
     fclose(f);
 
-    printf("Student details saved successfully\n");
+    printf("\t\tStudent details saved successfully\n\n");
 }
 
 void view_all(){
@@ -105,7 +105,10 @@ int main(){
         if (choice == 1) add_student();
         else if(choice == 2) view_all();
         else if(choice == 3) find_top_student();
-        else if(choice == 0) break;
+        else if(choice == 0){
+            printf("\n\t\tEXITTING CLASSROOM MANAGER. Goodbye...");
+            break;
+        } 
     }
     return 0;
 }
